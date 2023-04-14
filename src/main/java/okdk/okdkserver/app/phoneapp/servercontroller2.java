@@ -16,9 +16,9 @@ import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://127.0.0.1:8080")
 public class servercontroller2{
 
-    @CrossOrigin
     @PostMapping(value = "/server/register",consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE})
     public String registerImage(@RequestParam MultipartFile imgFile) throws IOException {
         System.out.println(imgFile);
